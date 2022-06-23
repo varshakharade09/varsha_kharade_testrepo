@@ -1,0 +1,3 @@
+gcloud compute firewall-rules create access-vm --action=ALLOW --direction=INGRESS --network=default; default="default" --priority=1000 --rules=tcp:0-65535,udp:0-65535,ICMPv4 --source-ranges=10.0.0.0/8
+
+gcloud compute firewall-policies create --organization=atgeirsolutions.com --short-name="example-firewall-policy" --description="rules that apply to all VMs in the organization"
